@@ -23,6 +23,5 @@ public interface VehiculoRepository extends CrudRepository<tbl_vehiculo, Integer
     @Override
     public List<tbl_vehiculo>  findAll();
     
-    @Query(value ="UPDATE tbl_vehiculo SET marca = ?1, tipo_vehiculo = ?2, color = ?3, tipo_combustible = ?4, antiguedad = ?5 WHERE id_vehiculo = ?6", nativeQuery = true)
-    public void updateVehiculo(@Param("vmarca") String vmarca, @Param("vtipo_vehiculo") int vtipo_vehiculo, @Param("vcolor") String vcolor , @Param("vtipo_combustible") int vtipo_combustible, @Param("vantiguedad") int vantiguedad, @Param("vid_vehiculo") int vid_vehiculo );
+   
 }

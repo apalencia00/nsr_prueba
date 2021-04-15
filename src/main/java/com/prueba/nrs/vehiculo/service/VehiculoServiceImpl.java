@@ -39,7 +39,15 @@ public class VehiculoServiceImpl implements VehiculoService{
 
     @Override
     public int updateVehiculos(String vmarca, int tipo_v, String vcolor, int comb, int antiguedad ,int id) {
-        vehiculoRepository.updateVehiculo(vmarca, tipo_v, vcolor, tipo_v, antiguedad, id);
+        tbl_vehiculo vehic = vehiculoRepository.findById(id).get();
+        vehic.setMarca(vmarca);
+        vehic.setTipo_vehiculo(tipo_v);
+        vehic.setColor(vcolor);
+        vehic.setTipo_combustible(comb);
+        vehic.setAntiguedad(antiguedad);
+        
+        vehiculoRepository.save(vehic);
+        
         return 1;
     }
     
