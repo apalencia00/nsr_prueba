@@ -30,14 +30,17 @@ public class VehiculoServiceImpl implements VehiculoService{
         
     }
 
-    @Override
-    public int updateVehiculos(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public tbl_vehiculo saveVehiculo(tbl_vehiculo vehiculo) {
         return vehiculoRepository.save(vehiculo);
+    }
+
+    @Override
+    public int updateVehiculos(String vmarca, int tipo_v, String vcolor, int comb, int id) {
+        vehiculoRepository.updateVehiculo(vmarca, tipo_v, vcolor, tipo_v, id, id);
+        return 1;
     }
     
 }
