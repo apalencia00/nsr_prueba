@@ -24,6 +24,11 @@ public class tbl_tipo_combustible implements Serializable {
      private int id_tipo_combustible;
      private String descripcion;
 
+    public tbl_tipo_combustible() {
+    }
+     
+     
+
     public tbl_tipo_combustible(int id_tipo_combustible, String descripcion) {
         this.id_tipo_combustible = id_tipo_combustible;
         this.descripcion = descripcion;

@@ -25,6 +25,11 @@ public class tbl_tipo_vehiculo implements Serializable {
      private int id_tipo_vehiculo;
      private String descripcion;
 
+    public tbl_tipo_vehiculo() {
+    }
+     
+     
+
     public tbl_tipo_vehiculo(int id_tipo_vehiculo, String descripcion) {
         this.id_tipo_vehiculo = id_tipo_vehiculo;
         this.descripcion = descripcion;
