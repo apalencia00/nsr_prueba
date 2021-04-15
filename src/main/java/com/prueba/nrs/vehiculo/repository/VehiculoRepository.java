@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
  * @author USER
  */
 @Repository
-public interface VehiculoRepository extends CrudRepository<tbl_vehiculo, Long>  {
+public interface VehiculoRepository extends CrudRepository<tbl_vehiculo, Integer>  {
     
     @Query(value ="SELECT * FROM tbl_vehiculo", nativeQuery = true)
     @Override

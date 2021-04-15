@@ -38,8 +38,8 @@ public class VehiculoServiceImpl implements VehiculoService{
     }
 
     @Override
-    public int updateVehiculos(String vmarca, int tipo_v, String vcolor, int comb, int id) {
-        vehiculoRepository.updateVehiculo(vmarca, tipo_v, vcolor, tipo_v, id, id);
+    public int updateVehiculos(String vmarca, int tipo_v, String vcolor, int comb, int antiguedad ,int id) {
+        vehiculoRepository.updateVehiculo(vmarca, tipo_v, vcolor, tipo_v, antiguedad, id);
         return 1;
     }
     

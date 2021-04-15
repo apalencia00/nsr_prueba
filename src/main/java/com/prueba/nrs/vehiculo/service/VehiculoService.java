@@ -14,7 +14,7 @@ import com.prueba.nrs.vehiculo.entity.tbl_vehiculo;
 public interface VehiculoService {
     
     java.util.List<tbl_vehiculo> getAllVehiculos();
-    int updateVehiculos(String vmarca, int tipo_v, String vcolor, int comb, int id);
+    int updateVehiculos(String vmarca, int tipo_v, String vcolor, int comb, int antiguedad ,int id);
     tbl_vehiculo saveVehiculo(tbl_vehiculo vehiculo);
     
 }
