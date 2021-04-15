@@ -50,5 +50,13 @@ public class VehiculoServiceImpl implements VehiculoService{
         
         return 1;
     }
+
+    @Override
+    public void deleteVehiculo(int id) {
+        
+        vehiculoRepository.deleteById(id);
+        
+        
+    }
     
 }

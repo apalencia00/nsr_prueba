@@ -10,6 +10,7 @@ import com.prueba.nrs.vehiculo.service.VehiculoService;
 import java.util.List;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -67,6 +68,15 @@ public class VehiculoController {
             vehiculoService.updateVehiculos(marca, tipo_v, color, tipo_comb, antiguedad, id);
             
             return "Updated";
+            
+        }
+        
+        
+        @DeleteMapping(path="/delete")
+        public @ResponseBody String deleteVehiculo(@RequestParam int id){
+            
+            vehiculoService.deleteVehiculo(id);
+            return "Deleted";
             
         }
         
